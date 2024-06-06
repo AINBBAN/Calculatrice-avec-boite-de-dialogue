@@ -8,6 +8,9 @@ function Soustraction(Nombre1,Nombre2) {
     return Nombre1 - Nombre2;
 }
 function Division(Nombre1,Nombre2) {
+  if(nombreB == 0) {
+        throw new Error("Impossible de diviser par 0."); 
+  }
     return Nombre1 / Nombre2;
 }
 
@@ -21,8 +24,8 @@ do {
     var Nombre2 = Number(prompt("Entrez le deuxième nombre"))
 
 } while (isNaN(Nombre1) || isNaN(Nombre2));
- 
 
+try{ 
 switch (Choix) {
     case  1: 
     var resultat = Addition(Nombre1,Nombre2);
@@ -36,6 +39,15 @@ switch (Choix) {
     case   4 :
     var resultat = Division(Nombre1,Nombre2);   
         break;
+     default:
+            throw new Error("Il y'a une erreur.");
+}
+  alert("Le resultat est " + resultat);
+}
+catch(error){
+  alert(error);
 }
 
-alert(resultat)
+
+
+
