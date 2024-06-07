@@ -8,7 +8,7 @@ function Soustraction(Nombre1,Nombre2) {
     return Nombre1 - Nombre2;
 }
 function Division(Nombre1,Nombre2) {
-  if(nombreB == 0) {
+  if(Nombre2== 0) {
         throw new Error("Impossible de diviser par 0."); 
   }
     return Nombre1 / Nombre2;
