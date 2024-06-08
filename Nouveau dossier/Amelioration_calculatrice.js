@@ -45,7 +45,7 @@ do {
     } while (Choix != 1 && Choix != 2 && Choix != 3 && Choix != 4);
 
     let nombres = [];
-    let count = 0; // Compteur pour suivre le nombre d'entrées valides
+    let count = 0; 
 
     do {
         var input = prompt("Entrez votre nombre");
@@ -53,16 +53,16 @@ do {
         if (input === null) {
             if (count < 2) {
                 alert("Vous devez entrer au moins deux nombres avant de pouvoir annuler.");
-                continue; // Recommence la boucle si moins de deux entrées valides
+                continue; 
             } else {
-                break; // Si deux nombres ont déjà été entrés, sort de la boucle
+                break; 
             }
         }
         var nombre = Number(input);
         if (!isNaN(nombre)) {
             alert("Vous avez entré le nombre : " + nombre);
-            nombres.push(nombre); // Ajoute le chiffre à la liste des nombres
-            count++; // Incrémente le compteur pour chaque entrée valide
+            nombres.push(nombre); 
+            count++; 
         } else {
             alert("Ce n'est pas un nombre valide.");
         }
